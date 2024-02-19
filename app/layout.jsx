@@ -1,5 +1,5 @@
 import { orbitron , exo_2 } from "./fonts";
-import "./globals.css"
+import "./globals.css";
 import NavBar from "@/components/NavBar";
 
 // หน้านี้เป็นหน้าหลัก *
@@ -14,6 +14,7 @@ export default function RootLayout({ children }) {
     return (
       <html lang="en" className={`${exo_2.variable} ${orbitron.variable}`}>
         <body className="bg-orange-50 flex flex-col px-4 py-2 min-h-screen">
+
         <header>
          <NavBar/>
         </header>

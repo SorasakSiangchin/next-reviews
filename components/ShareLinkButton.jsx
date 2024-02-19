@@ -18,7 +18,7 @@ const ShareLinkButton = () => {
     }, 1500);
   };
 
-  console.log('[ShareLinkButton] rendering')
+  //console.log('[ShareLinkButton] rendering')
     
   return (
     <button 

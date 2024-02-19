@@ -1,5 +1,5 @@
 
-
+import Image from "next/image";
 import Heading from "@/components/Heading";
 import ShareButtons from "@/components/ShareButtons";
 import { getReview, getSlugs } from "@/lib/reviews";
@@ -8,6 +8,7 @@ import { getReview, getSlugs } from "@/lib/reviews";
 // มันรู้ของมันเอง ****
 export const generateStaticParams = async () => {
   const slugs = await getSlugs();
+  //console.log('[ReviewPage] generateStaticParams : ' , slugs);
   return slugs.map(slug => ({ slug }));
 };
 
@@ -27,11 +28,12 @@ const ReviewPage = async ({ params: { slug } }) => {
   return (
     <>
       <Heading>{review.title}</Heading>
+      <p className="font-semibold pb-2">{review.subtitle}</p>
       <div className="flex gap-2 items-baseline">
         <p className="italic pb-2">{review.date}</p>
         <ShareButtons  />
       </div>
-      <img
+      <Image
         src={review.image}
         width="640"
         height="360"
