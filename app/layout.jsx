@@ -26,6 +26,7 @@ export default function RootLayout({ children }) {
         <footer className="border-t py-3 text-slate-500 text-center text-xs">
         Game data and images courtesy
           of <a href="https://rawg.io/" className="text-orange-800 hover:underline" target="_blank">RAWG</a>
+          {"  "} Deployed on vercel
         </footer>
         </body>
       </html>
